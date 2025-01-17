@@ -1,6 +1,6 @@
 {
   "name": "react-native-story-component",
-  "version": "0.0.9",
+  "version": "0.0.45",
   "main": "dist/index.js",
   "module": "dist/index.d.js",
   "files": [

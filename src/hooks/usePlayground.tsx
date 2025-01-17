@@ -32,6 +32,7 @@ import {TypesList} from "../components/TypesList";
 import {BoolList} from "../components/BoolList";
 import {TextList} from "../components/TextList";
 import {PressedList} from "../components/PressedList";
+import {CodeView} from "../components/CodeView";
 
 const PlaygroundContext = React.createContext({} as IPlaygroundContextProps);
 
@@ -145,14 +146,25 @@ export function PlaygroundProvider({
 
     const resultList: string[] = [];
 
+    // adding types code
+    resultList.push(
+      typesState
+        .filter(f => f.field !== undefined)
+        .filter(f => f.value !== undefined)
+        .map(m => `||${m.field}="${m.value}"`)
+        .join("\n")
+        .toString(),
+    );
+
     // adding text without 'field group' defined
     resultList.push(
       textState
         .filter(f => f.field !== undefined)
         .filter(f => f.fieldGroup === undefined)
         .filter(f => f.value !== "")
-        .map(m => ` ${m.field}="${m.value}"`)
+        .map(m => `||${m.field}="${m.value}"`)
         .join("\n")
+        .trim()
         .toString(),
     );
 
@@ -164,10 +176,10 @@ export function PlaygroundProvider({
       .filter(f => f.field !== undefined)
       .filter(f => f.fieldGroup !== undefined)
       .forEach(fe => {
-        const fieldGroupText = `  ${fe.fieldGroup}={{`;
+        const fieldGroupText = `${fe.fieldGroup}={{`;
 
         if (fieldGroupTemp !== fe.fieldGroup && fieldGroupInit) {
-          resultList.push("  }}");
+          resultList.push("}}");
           fieldGroupInit = false;
         }
 
@@ -177,41 +189,32 @@ export function PlaygroundProvider({
         }
 
         if (resultList.includes(fieldGroupText)) {
-          resultList.push(`    ${fe.field}="${fe.value}"`);
+          resultList.push(`${fe.field}="${fe.value}"`);
         }
 
         fieldGroupTemp = fe.fieldGroup;
       });
 
     if (fieldGroupInit) {
-      resultList.push("  }}");
+      resultList.push("}}");
     }
-
-    // adding types code
-    resultList.push(
-      typesState
-        .filter(f => f.field !== undefined)
-        .filter(f => f.value !== undefined)
-        .map(m => `  ${m.field}="${m.value}"`)
-        .join("\n")
-        .toString(),
-    );
 
     // adding boolean code
     resultList.push(
       boolState
         .filter(f => f.field !== undefined)
         .filter(f => f.value !== false)
-        .map(m => `  ${m.field}`)
+        .map(m => `||${m.field}`)
         .join("\n")
         .toString(),
     );
 
     // initi a component with name
-    return `
-<${componentName}
-  ${resultList.filter(f => f !== "").join("\n")}
-/>`;
+    const codeBase = `<${componentName}\n${resultList
+      .filter(f => f !== "")
+      .join("\n")}\n/>`;
+
+    return codeBase.split("||").join(" ");
   }
 
   const isEnabledButtonShowCode = !componentName;
@@ -231,7 +234,7 @@ export function PlaygroundProvider({
 
       <Spacing height={8} />
       <View style={{paddingLeft: paddingLeft}}>
-        <ButtonOpen label="Open Playground" onPress={() => setOpen(true)} />
+        <ButtonOpen label="Playground" onPress={() => setOpen(true)} />
       </View>
 
       <SuperDrawer
@@ -250,26 +253,7 @@ export function PlaygroundProvider({
           </Stage>
         )}
 
-        {showCode && (
-          <View
-            style={{
-              maxHeight: "50%",
-              minHeight: "50%",
-              backgroundColor: "#282c34",
-            }}
-          >
-            <View style={{maxHeight: "100%"}}>
-              <SyntaxHighlighter
-                language="jsx"
-                style={atomOneDark}
-                customStyle={{paddingHorizontal: 16, paddingTop: 16}}
-                highlighter="hljs"
-              >
-                {getCode()}
-              </SyntaxHighlighter>
-            </View>
-          </View>
-        )}
+        {showCode && <CodeView code={getCode()} />}
 
         <View style={{paddingVertical: 1, paddingHorizontal: 24}}>
           <Divider />
@@ -289,7 +273,7 @@ export function PlaygroundProvider({
               onChangeText={value => onChangeText(value, t)}
               bottomAnimation={animation.interpolate({
                 inputRange: [0, 1],
-                outputRange: [-keyboardHeight, keyboardHeight + 10],
+                outputRange: [-keyboardHeight, keyboardHeight],
               })}
               opacityAnimation={animation.interpolate({
                 inputRange: [0, 1],
@@ -300,7 +284,7 @@ export function PlaygroundProvider({
         })}
 
         <ScrollView
-          style={{height: "44%"}}
+          style={{flex: 2}}
           contentContainerStyle={{paddingBottom: getBottomSpace()}}
           showsVerticalScrollIndicator={false}
         >

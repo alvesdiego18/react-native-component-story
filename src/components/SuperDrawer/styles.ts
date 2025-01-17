@@ -11,6 +11,7 @@ export const HandleView = styled.View`
 `;
 
 export const Content = styled.View`
+  flex: 1;
   padding-top: 8px;
 `;
 

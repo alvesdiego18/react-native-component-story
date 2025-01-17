@@ -1,8 +1,7 @@
 /* eslint-disable react-native/no-unused-styles */
 import React from "react";
 
-//@ts-ignore
-import {DimensionValue, ScrollView, StyleSheet} from "react-native";
+import {ScrollView, StyleSheet} from "react-native";
 
 import {Spacing} from "../Spacing";
 
@@ -10,16 +9,10 @@ interface Props {
   children: React.ReactNode;
   keyboardHeight: number;
   scrollEnabled: boolean;
-  height?: DimensionValue;
 }
 
-export function Stage({
-  children,
-  keyboardHeight,
-  scrollEnabled,
-  height,
-}: Props) {
-  const stylesSelected = styles(keyboardHeight, height);
+export function Stage({children, keyboardHeight, scrollEnabled}: Props) {
+  const stylesSelected = styles(keyboardHeight);
 
   return (
     <ScrollView
@@ -35,10 +28,10 @@ export function Stage({
   );
 }
 
-const styles = (keyboardHeight: number, height?: DimensionValue) =>
+const styles = (keyboardHeight: number) =>
   StyleSheet.create({
     scroll: {
-      height: height ?? "50%",
+      flex: 1,
     },
     scrollContainer: {
       justifyContent: "space-between",
