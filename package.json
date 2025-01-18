@@ -1,6 +1,6 @@
 {
   "name": "react-native-story-component",
-  "version": "0.0.79",
+  "version": "0.0.81",
   "main": "dist/index.js",
   "module": "dist/index.d.js",
   "files": [
@@ -22,7 +22,6 @@
   },
   "dependencies": {
     "@react-native-community/blur": "^4.4.0",
-    "fs": "^0.0.1-security",
     "path": "^0.12.7",
     "react-native-syntax-highlighter": "^2.1.0",
     "styled-components": "6.0.7"
