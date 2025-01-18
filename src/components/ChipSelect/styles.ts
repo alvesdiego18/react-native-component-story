@@ -9,30 +9,36 @@ export const Container = styled.TouchableOpacity.attrs(_ => ({
 }))<Props>`
   height: 44px;
   width: auto;
-  border-radius: 500px;
-
   padding: 0 16px;
 
   justify-content: center;
   align-items: center;
 
   ${props => {
-    const {selected} = props;
+    const {theme, selected} = props;
+
+    const backgroundColor = theme.backgroundColor ?? "#333333";
+    const borderColor = theme.borderColor ?? "#333333";
+    const borderRadius = theme.borderRadius ?? 8;
 
     return `
-      background-color: ${selected ? "#333333" : "#FFFFFF"};
+      background-color: ${selected ? backgroundColor : "transparent"};
       border-width: 1px;
-      border-color: #333333;
+      border-radius: ${borderRadius}px;
+      border-color: ${selected ? backgroundColor : borderColor};
     `;
   }}
 `;
 
 export const Label = styled.Text<Props>`
   ${props => {
-    const {selected} = props;
+    const {theme, selected} = props;
+
+    const colorSelected = theme.textColorSelected ?? "#FFFFFF";
+    const color = theme.textColor ?? "#333333";
 
     return `
-      color: ${selected ? "#FFFFFF" : "#333333"};
+      color: ${selected ? colorSelected : color};
     `;
   }}
 `;

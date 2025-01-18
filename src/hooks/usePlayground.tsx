@@ -33,6 +33,7 @@ import {BoolList} from "../components/BoolList";
 import {TextList} from "../components/TextList";
 import {PressedList} from "../components/PressedList";
 import {CodeView} from "../components/CodeView";
+import {useStoryComponentTheme} from "./usePlaygroundTheme";
 
 const PlaygroundContext = React.createContext({} as IPlaygroundContextProps);
 
@@ -45,6 +46,8 @@ export function PlaygroundProvider({
   stageScrollEnabled = false,
   componentName,
 }: IProviderProps) {
+  const {buttonName} = useStoryComponentTheme();
+
   const inputRef = React.useRef(null);
   const animation = React.useRef(new Animated.Value(0)).current;
 
@@ -234,7 +237,10 @@ export function PlaygroundProvider({
 
       <Spacing height={8} />
       <View style={{paddingLeft: paddingLeft}}>
-        <ButtonOpen label="Playground" onPress={() => setOpen(true)} />
+        <ButtonOpen
+          label={buttonName ?? "Playground"}
+          onPress={() => setOpen(true)}
+        />
       </View>
 
       <SuperDrawer

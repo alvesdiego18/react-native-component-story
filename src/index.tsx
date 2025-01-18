@@ -6,6 +6,7 @@ import {
 } from "./types/playground.interface";
 
 import {Playground} from "./playground";
+import {StoryComponentTheme} from "./hooks/usePlaygroundTheme";
 
 export type {
   IPlaygroundTextProps,
@@ -14,4 +15,4 @@ export type {
   IPlaygroundContextProps,
 };
 
-export {Playground};
+export {Playground, StoryComponentTheme};

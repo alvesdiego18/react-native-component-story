@@ -26,7 +26,7 @@ export const Container = styled.TouchableOpacity.attrs(_ => ({
         onBrand,
       })};
 
-      padding: 0 32px;
+      padding: 0 32px; 
 
       ${blocked ? "" : "align-self: center;"}
     `;

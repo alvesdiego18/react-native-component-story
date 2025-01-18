@@ -22,11 +22,20 @@ export const Container = styled.TouchableOpacity.attrs(_ => ({
 `;
 
 export const Ripple = styled.View<Props>`
+  position: absolute;
+
   width: 56px;
   height: 40px;
-  border-radius: 500px;
 
-  position: absolute;
+  ${props => {
+    const {theme} = props;
+
+    const borderRadius = borderRadiusCalc(theme.borderRadius ?? 8);
+
+    return `      
+      border-radius: ${borderRadius}px;
+    `;
+  }}
 `;
 
 export const Circle = styled(Animated.View)<Props>`
@@ -40,20 +49,24 @@ export const Circle = styled(Animated.View)<Props>`
 export const Switch = styled(Animated.View)<Props>`
   width: 40px;
   height: 24px;
-  border-radius: 500px;
+
   justify-content: center;
 
   ${props => {
-    const {selected} = props;
+    const {theme, selected} = props;
 
     const borderWidth = 1;
     const paddingHorizontal = 4 - borderWidth;
+
+    const borderColor = theme.borderColor ?? "#333333";
+    const borderRadius = borderRadiusCalc(theme.borderRadius ?? 8);
 
     return `
       background-color: ${selected ? "#d8d0cb" : "transparent"};
       padding: 0 ${paddingHorizontal}px;
       border-width: ${borderWidth}px;
-      border-color: ${selected ? "transparent" : "#333333"};
+      border-radius: ${borderRadius}px;
+      border-color: ${selected ? "transparent" : borderColor};
     `;
   }};
 `;
@@ -61,11 +74,40 @@ export const Switch = styled(Animated.View)<Props>`
 export const Dot = styled(Animated.View)<Props>`
   height: 16px;
   width: 16px;
-  border-radius: 500px;
-  background-color: #333333;
+
+  ${props => {
+    const {theme} = props;
+
+    const backgroundColor = theme.backgroundColor ?? "#333333";
+    const borderRadius = borderRadiusCalc(theme.borderRadius ?? 8);
+
+    return `
+      background-color: ${backgroundColor};
+      border-radius: ${borderRadius}px;
+    `;
+  }}
 `;
 
 export const Label = styled.Text<Props>`
-  color: #211e1c;
   font-size: 16px;
+
+  ${props => {
+    const {theme} = props;
+
+    const textColor = theme.textColor ?? "#211e1c";
+
+    return `
+      color: ${textColor};
+    `;
+  }}
 `;
+
+function borderRadiusCalc(borderRadius: number) {
+  if (borderRadius > 0) {
+    borderRadius = borderRadius / 2;
+  } else {
+    borderRadius = 0;
+  }
+
+  return borderRadius;
+}

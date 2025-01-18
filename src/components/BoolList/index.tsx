@@ -8,16 +8,12 @@ import {Switch} from "../Switch";
 import {splitCamelCase} from "../../utils/split_camelcase";
 import {IPlaygroundBoolProps} from "../../types/playground.interface";
 
-// import {useDS} from "@gol-smiles/tangerina-react-native-core";
-
 interface Props {
   boolState: IPlaygroundBoolProps[];
   setBoolState: (value: React.SetStateAction<IPlaygroundBoolProps[]>) => void;
 }
 
 export function BoolList({boolState, setBoolState}: Props) {
-  // const {changeTheme, mode} = useDS();
-
   const onPress = React.useCallback(
     (b: IPlaygroundBoolProps) => {
       const filter = boolState.map(f => {
@@ -50,14 +46,6 @@ export function BoolList({boolState, setBoolState}: Props) {
         </View>
       ))}
 
-      {/* <Spacing height={8} />
-      <Switch
-        label={"Dark mode"}
-        selected={mode === "dark"}
-        onPress={() => {
-          changeTheme({mode: mode === "light" ? "dark" : "light"});
-        }}
-      /> */}
       <Spacing height={16} />
     </View>
   );

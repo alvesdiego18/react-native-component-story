@@ -9,8 +9,9 @@ import {
 
 import {splitCamelCase} from "../../utils/split_camelcase";
 
-import {styles} from "./styles";
+import {styles as inputStyles} from "./styles";
 import {Label} from "../Label";
+import {useStoryComponentTheme} from "../../hooks/usePlaygroundTheme";
 
 interface Props {
   title: string;
@@ -35,8 +36,11 @@ export function Input({
   opacityAnimation,
   keyboardType,
 }: Props) {
+  const {borderRadius} = useStoryComponentTheme();
   const {width} = useWindowDimensions();
   const [isFocused, setIsFocused] = React.useState(false);
+
+  const styles = inputStyles(borderRadius);
 
   const isFilled = value && value.length > 0;
 
