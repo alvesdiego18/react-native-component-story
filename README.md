@@ -19,7 +19,7 @@
 2. 💻 [Instalar](#instalar)
 3. 🍕 [Como usar](#como-usar)
 4. ✏️ [Customizar Elementos](#customizar-elementos)
-5. 🎤 [Types](#TYPES.md)
+5. 🎤 [Types](./TYPES.md)
 
 <br/>
 
