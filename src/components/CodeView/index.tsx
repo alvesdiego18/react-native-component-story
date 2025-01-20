@@ -14,7 +14,7 @@ interface Props {
 }
 
 export function CodeView({code}: Props) {
-  const [buttonText, setButtonText] = React.useState("Copy");
+  const [buttonText, setButtonText] = React.useState("Copiar");
 
   function handleCopy() {
     Clipboard.setString(code);
