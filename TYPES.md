@@ -4,15 +4,15 @@
 
 ### StoryComponent
 
-| Nome               | Tipo                                                                     | Obrigatório | Descrição                                                       |
-| ------------------ | ------------------------------------------------------------------------ | ----------- | --------------------------------------------------------------- |
-| text               | [IPlaygroundTextProps[]](#iplaygroundtextprops)                          | false       | define quais os `textos` serão manipulados                      |
-| bool               | [IPlaygroundBoolProps[]](#iplaygroundboolprops)                          | false       | define quais campos `booleanos` serão manipulados               |
-| types              | [IPlaygroundTypesProps[]](#iplaygroundtypesprops)                        | false       | define quais `types` serão manipulados                          |
-| renderItem         | (pg: [IPlaygroundContextProps](#iplaygroundcontextprops)) => JSX.Element | false       | componente a ser renderizado                                    |
-| componentName      | string                                                                   | false       | define qual o nome do componente será exibido ao gerar o código |
-| stageScrollEnabled | boolean                                                                  | false       | ativa o scroll no `palco`                                       |
-| paddingLeft        | number                                                                   | false       | adiciona um espaçamento a esquerda                              |
+| Nome               | Tipo                                                           | Obrigatório | Descrição                                                       |
+| ------------------ | -------------------------------------------------------------- | ----------- | --------------------------------------------------------------- |
+| text               | [IStoryTextProps[]](#istorytextprops)                          | false       | define quais os `textos` serão manipulados                      |
+| bool               | [IStoryBoolProps[]](#istoryboolprops)                          | false       | define quais campos `booleanos` serão manipulados               |
+| types              | [IStoryTypesProps[]](#istorytypesprops)                        | false       | define quais `types` serão manipulados                          |
+| renderItem         | (pg: [IStoryContextProps](#istorycontextprops)) => JSX.Element | false       | componente a ser renderizado                                    |
+| componentName      | string                                                         | false       | define qual o nome do componente será exibido ao gerar o código |
+| stageScrollEnabled | boolean                                                        | false       | ativa o scroll no `palco`                                       |
+| paddingLeft        | number                                                         | false       | adiciona um espaçamento a esquerda                              |
 
 #### Exemplo:
 
