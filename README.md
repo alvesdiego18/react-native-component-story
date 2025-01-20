@@ -51,7 +51,6 @@ import {StoryComponent} from "react-native-story-component";
 <StoryComponent
   text={[{title: "label", value: "Label"}]}
   bool={[{title: "loading", value: false}]}
-  types={[]}
   renderItem={pg => (
     <Button
       onPress={() => pg.onPress("onPress", handlePress)}
