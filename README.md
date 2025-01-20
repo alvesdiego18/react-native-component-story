@@ -88,3 +88,5 @@ import {StoryComponentThemeProvider} from "react-native-story-component";
   // Componente que inicia sua aplicação ...
 </StoryComponentThemeProvider>;
 ```
+
+![<alt-text>](./src/docfiles/custom.gif)
