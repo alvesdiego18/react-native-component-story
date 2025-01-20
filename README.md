@@ -1,5 +1,5 @@
 <div align="center">
-  <h1 align="center">StoryComponent</h1>
+  <h1 align="center">Story Component</h1>
 
   <div align="center">
      Para atender à necessidade de realizar QAs mais eficientes em componentes React Native, desenvolvi esta biblioteca. Ela facilita o entendimento, permitindo manipular ou alterar informações diretamente nos componentes. Trata-se de uma alternativa prática ao Storybook, que exige implementação individual para cada componente.  
@@ -20,6 +20,7 @@
 3. 💻 [Como usar](#como-usar)
 4. ✏️ [Customizar Elementos](#customizando-elementos)
 5. 🎤 [Types](./TYPES.md)
+6. 📝 [Licença](./LICENSE.md)
 
 <br/>
 
