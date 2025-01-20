@@ -11,7 +11,7 @@ import {splitCamelCase} from "../../utils/split_camelcase";
 
 import {styles as inputStyles} from "./styles";
 import {Label} from "../Label";
-import {useStoryComponentTheme} from "../../hooks/usePlaygroundTheme";
+import {useStoryComponentTheme} from "../../hooks/useStoryComponentTheme";
 
 interface Props {
   title: string;

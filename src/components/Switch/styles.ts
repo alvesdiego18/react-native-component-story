@@ -62,7 +62,7 @@ export const Switch = styled(Animated.View)<Props>`
     const borderRadius = borderRadiusCalc(theme.borderRadius ?? 8);
 
     return `
-      background-color: ${selected ? "#d8d0cb" : "transparent"};
+      background-color: ${selected ? "#efefef" : "transparent"};
       padding: 0 ${paddingHorizontal}px;
       border-width: ${borderWidth}px;
       border-radius: ${borderRadius}px;
