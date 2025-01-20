@@ -19,12 +19,12 @@ npm i react-native-story-component
 
 ### Como usar
 
-> Para utilizá-la, basta instanciar o `Playground`, informar o componente a ser renderizado por meio da propriedade `renderItem` e adicionar os campos que serão manipulados. Confira um exemplo prático abaixo:
+> Para utilizá-la, basta instanciar o `StoryComponent`, informar o componente a ser renderizado por meio da propriedade `renderItem` e adicionar os campos que serão manipulados. Confira um exemplo prático abaixo:
 
 ```js
-import { Playground } from 'react-native-story-component';
+import { StoryComponent } from 'react-native-story-component';
 
-<Playground
+<StoryComponent
   // Define quantos campos de manipulação
   // de texto serão criados.
   text={[
@@ -74,7 +74,7 @@ import { Playground } from 'react-native-story-component';
 
 ## Customizar Elementos
 
-> Para personalizar os elementos do `Playground`, basta incluir o `StoryComponentTheme` no início do seu projeto e configurar as propriedades de manipulação de cores conforme sua necessidade.
+> Para personalizar os elementos do `Playground`, basta incluir o `StoryComponentThemeProvider` no início do seu projeto e configurar as propriedades de manipulação de cores conforme sua necessidade.
 
 ```js
 import {StoryComponentThemeProvider} from "react-native-story-component";

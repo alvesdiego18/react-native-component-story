@@ -14,6 +14,20 @@
 | stageScrollEnabled | boolean                                                                  | false       | ativa o scroll no `palco`                                       |
 | paddingLeft        | number                                                                   | false       | adiciona um espaçamento a esquerda                              |
 
+#### Exemplo:
+
+```js
+<StoryComponent
+  text={[{title: 'TITLE', value: 'VALUE'}]}
+  bool={[{title: 'TITLE', value: 'VALUE'}]}
+  types={[{title: 'TITLE', value: 'VALUE'}]}
+  renderItem={pg => ({ <></> })}
+  componentName='COMPONENT NAME'
+  stageScrollEnabled={true}
+  paddingLeft={24}
+/>
+```
+
 ### IPlaygroundContextProps
 
 | Nome      | Tipo                                            | Obrigatório | Descrição                                                                                         |
@@ -28,10 +42,7 @@
 #### Exemplo:
 
 ```js
-<StoryComponent
-  bool={boolList}
-  text={textList}
-  types={typesList}
+...
   renderItem={pg => (
     <Button
       onPress={pg.onPress('onPress', handlePress)}
@@ -43,7 +54,7 @@
       icon={pg.getType('icon') as any}
     />
   )}
-/>
+...
 ```
 
 ### IPlaygroundTextProps
