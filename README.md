@@ -4,13 +4,14 @@
 
 ![<alt-text>](./src/docfiles/storycomponent.gif)
 
+- [Instalar](#instalar)
 - [Como usar](#como-usar)
 - [Customizar Elementos](#customizar-elementos)
 - [Types](./TYPES.md)
 
 ### Instalar
 
-> Execute o comando abaixo para instalar o `Story Component`.
+> Execute o comando abaixo para instalar o `StoryComponent`.
 
 ```js
 npm i react-native-story-component
@@ -42,7 +43,8 @@ import { Playground } from 'react-native-story-component';
   types={[
     {
       title: 'icon',
-      value: undefined, // define qual o valor o componente será inicializado.
+      // define qual o valor o componente será inicializado.
+      value: undefined,
       // adiciona uma lista de opções de ícones já instalados no projeto.
       list: [undefined,'pix','pin-drop','pill','photo-camera' ],
       fiedl: 'icon'
