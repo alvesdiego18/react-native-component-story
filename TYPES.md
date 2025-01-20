@@ -1,6 +1,6 @@
 # Types
 
-> Confira abaixo as possibilidades de propriedades e suas tipagens.
+> Confira abaixo as propriedades disponíveis para configuração no `Playground`:
 
 ### Playground
 

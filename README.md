@@ -4,7 +4,7 @@
 
 - [Como usar](#como-usar)
 - [Customizar Elementos](#customizar-os-elementos-do-playground)
-- [Types](#types)
+- [Types](./TYPES.md)
 
 ### Como usar
 
@@ -74,7 +74,3 @@
   // Componente que inicia sua aplicação ...
 </StoryComponentTheme>
 ```
-
-## Types
-
-Confira [aqui](./TYPES.md) as propriedades disponíveis para configuração no `Playground`:
