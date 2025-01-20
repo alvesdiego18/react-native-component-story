@@ -39,7 +39,7 @@ npm i react-native-story-component
 
 <br/>
 
-## <a name="como-usar">⚙️ Como usar</a>
+## <a name="como-usar">🍕 Como usar</a>
 
 > Para utilizá-la, basta instanciar o `StoryComponent`, informar o componente a ser renderizado por meio da propriedade `renderItem` e adicionar os campos que serão manipulados. Confira um exemplo prático abaixo:
 
