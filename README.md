@@ -16,8 +16,8 @@
 ## 📋 <a name="table">Sumário</a>
 
 1. 👔 [Exemplo](#exemplo)
-2. 💻 [Instalar](#instalar)
-3. 🍕 [Como usar](#como-usar)
+2. 🍕 [Instalar](#instalar)
+3. 💻 [Como usar](#como-usar)
 4. ✏️ [Customizar Elementos](#customizar-elementos)
 5. 🎤 [Types](./TYPES.md)
 
@@ -29,7 +29,7 @@
 
 <br/>
 
-## <a name="instalar">💻 Instalar</a>
+## <a name="instalar">🍕 Instalar</a>
 
 > Execute o comando abaixo para instalar o `StoryComponent`.
 
@@ -39,7 +39,7 @@ npm i react-native-story-component
 
 <br/>
 
-## <a name="como-usar">🍕 Como usar</a>
+## <a name="como-usar">💻 Como usar</a>
 
 > Para utilizá-la, basta instanciar o `StoryComponent`, informar o componente a ser renderizado por meio da propriedade `renderItem` e adicionar os campos que serão manipulados. Confira um exemplo prático abaixo:
 

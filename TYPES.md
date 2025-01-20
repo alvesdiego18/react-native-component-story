@@ -36,7 +36,7 @@
 | getNumber | (title: string) => number                       | false       | busca um `number` baseado na sua key. Ao utilizar essa opção o keyboard vem com teclado númerico. |
 | getBool   | (title: string) => boolean                      | false       | busca um `boolean` baseado na sua key                                                             |
 | getType   | (title: string) => string                       | false       | busca um `type` baseado na sua key                                                                |
-| onPress   | (title?: string, callback?: () => void) => void | false       | adiciona um controle as funções de `pressed`                                                      |
+| onPress   | (title?: string, callback?: () => void) => void | false       | adiciona um controle as funções de `pressed` que exibe um texto quando o botão é pressionado.     |
 | isOpen    | boolean                                         | false       | controle para checagem se a `drawer` está aberta                                                  |
 
 #### Exemplo:
@@ -62,7 +62,7 @@
 | Nome     | Tipo    | Obrigatório | Descrição                                         |
 | -------- | ------- | ----------- | ------------------------------------------------- |
 | title    | string  | true        | define qual o `título/key` da opção               |
-| value    | string  | true        | define qual o valor a oção começa                 |
+| value    | string  | true        | define qual o valor a opção começa                |
 | group    | string  | false       | define um grupo para `juntar` muitas propriedades |
 | isNumber | boolean | false       | define se este campo deve ser trato como `number` |
 | field    | string  | false       | define qual o nome no `código` desse campo        |
@@ -87,7 +87,7 @@ pg.getText("label");
 | Nome  | Tipo   | Obrigatório | Descrição                                  |
 | ----- | ------ | ----------- | ------------------------------------------ |
 | title | string | true        | define qual o `título/key` da opção        |
-| value | string | true        | define qual o valor a oção começa          |
+| value | string | true        | define qual o valor a opção começa         |
 | field | string | false       | define qual o nome no `código` desse campo |
 
 #### Exemplo:
@@ -110,7 +110,7 @@ pg.getBool("loading");
 | Nome  | Tipo     | Obrigatório | Descrição                                  |
 | ----- | -------- | ----------- | ------------------------------------------ |
 | title | string   | true        | define qual o `título/key` da opção        |
-| value | string   | true        | define qual o valor a oção começa          |
+| value | string   | true        | define qual o valor a opção começa         |
 | list  | string[] | true        | define quais as opções disponíveis         |
 | field | string   | false       | define qual o nome no `código` desse campo |
 
