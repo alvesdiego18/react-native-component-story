@@ -11,6 +11,8 @@
 > Para utilizá-la, basta instanciar o `Playground`, informar o componente a ser renderizado por meio da propriedade `renderItem` e adicionar os campos que serão manipulados. Confira um exemplo prático abaixo:
 
 ```js
+import { Playground } from 'react-native-story-component';
+
 <Playground
   // Define quantos campos de manipulação
   // de texto serão criados.
@@ -42,9 +44,9 @@
   stageScrollEnabled={false}
   // O `pg` retorna todas as funções necessárias para buscar os valores definidos no playground. Veja as opções disponíveis [aqui](#iplaygroundcontextprops).
   renderItem={pg => (
+
     // O componente Button será renderizando criando os controles para manipulaçãp.
     // de propriedades conforme foram criados em cada um dos tipos.
-
     <Button
       onPress={() => pg.onPress('onPress', handlePress)}
       label={pg.getText('label')}
@@ -63,6 +65,8 @@
 > Para personalizar os elementos do `Playground`, basta incluir o `StoryComponentTheme` no início do seu projeto e configurar as propriedades de manipulação de cores conforme sua necessidade.
 
 ```js
+import {StoryComponentTheme} from "react-native-story-component";
+
 <StoryComponentTheme
   buttonName="Abrir Playground"
   backgroundColor="red"
@@ -72,5 +76,5 @@
   borderRadius={500}
 >
   // Componente que inicia sua aplicação ...
-</StoryComponentTheme>
+</StoryComponentTheme>;
 ```
