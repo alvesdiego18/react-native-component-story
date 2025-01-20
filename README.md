@@ -43,35 +43,71 @@ npm i react-native-story-component
 
 > Para utilizá-la, basta instanciar o `StoryComponent`, informar o componente a ser renderizado por meio da propriedade `renderItem` e adicionar os campos que serão manipulados. Confira um exemplo prático abaixo:
 
+#### Exemplo simplificado
+
 ```js
 import { StoryComponent } from 'react-native-story-component';
 
+const textList = [
+  {title: 'label', value: 'Label', field: 'Label'}
+]
+
+const boolList = [
+  {title: 'loading', value: false, field: 'loading'}
+]
+
 <StoryComponent
-  // Define quantos campos de manipulação
-  // de texto serão criados.
-  text={[
-    {title: 'label', value: 'Label', field: 'Label'}
-  ]}
-  // Define quantos campos de manipulação
-  // de booleanos serão criados.
-  bool={[
-    {title: 'loading', value: false, field: 'loading'},
-    {title: 'blocked', value: false, field: 'blocked'},
-    {title: 'disabled', value: false, field: 'disabled'},
-    {title: 'on brand', value: false, field: 'onBrand'},
-  ]}
-  // Define quantos campos de manipulação
-  // de `types` serão criados.
-  types={[
-    {
-      title: 'icon',
-      // define qual o valor o componente será inicializado.
-      value: undefined,
-      // adiciona uma lista de opções de ícones já instalados no projeto.
-      list: [undefined,'pix','pin-drop','pill','photo-camera' ],
-      fiedl: 'icon'
-    },
-  ]}
+  text={textList}
+  bool={boolList}
+  types={[]}
+  renderItem={pg => (
+    <Button
+      onPress={() => pg.onPress('onPress', handlePress)}
+      label={pg.getText('label')}
+      loading={pg.getBool('loading')}
+    />
+  )}
+/>
+```
+
+#### Exemplo completo
+
+```js
+import { StoryComponent } from 'react-native-story-component';
+
+// Define quantos campos de manipulação
+// de texto serão criados.
+const textList = [
+  {title: 'label', value: 'Label', field: 'Label'}
+]
+
+// Define quantos campos de manipulação
+// de booleanos serão criados.
+const boolList = [
+  {title: 'loading', value: false, field: 'loading'},
+  {title: 'blocked', value: false, field: 'blocked'},
+  {title: 'disabled', value: false, field: 'disabled'},
+  {title: 'on brand', value: false, field: 'onBrand'},
+]
+
+// Define quantos campos de manipulação
+// de `types` serão criados.
+const typesList = [
+  {
+    title: 'icon',
+    // define qual o valor o componente será inicializado.
+    value: undefined,
+    // adiciona uma lista de opções de ícones já instalados no projeto.
+    list: [undefined,'pix','pin-drop','pill','photo-camera' ],
+    fiedl: 'icon'
+  },
+]
+
+<StoryComponent
+  text={textList}
+  bool={boolList}
+  types={typesList}
+
   // Nome do componente que será mostrado ao gerar o código.
   componentName="Button"
   // Define se o `palco` do componente terá scroll.
