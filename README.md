@@ -46,28 +46,20 @@ npm i react-native-story-component
 #### Exemplo simplificado
 
 ```js
-import { StoryComponent } from 'react-native-story-component';
-
-const textList = [
-  {title: 'label', value: 'Label', field: 'Label'}
-]
-
-const boolList = [
-  {title: 'loading', value: false, field: 'loading'}
-]
+import {StoryComponent} from "react-native-story-component";
 
 <StoryComponent
-  text={textList}
-  bool={boolList}
+  text={[{title: "label", value: "Label"}]}
+  bool={[{title: "loading", value: false}]}
   types={[]}
   renderItem={pg => (
     <Button
-      onPress={() => pg.onPress('onPress', handlePress)}
-      label={pg.getText('label')}
-      loading={pg.getBool('loading')}
+      onPress={() => pg.onPress("onPress", handlePress)}
+      label={pg.getText("label")}
+      loading={pg.getBool("loading")}
     />
   )}
-/>
+/>;
 ```
 
 #### Exemplo completo
