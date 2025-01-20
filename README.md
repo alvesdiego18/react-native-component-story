@@ -3,7 +3,7 @@
 > Para atender à necessidade de realizar QAs mais eficientes em componentes React Native, desenvolvi esta biblioteca. Ela facilita o entendimento, permitindo manipular ou alterar informações diretamente nos componentes. Trata-se de uma alternativa prática ao Storybook, que exige implementação individual para cada componente.
 
 - [Como usar](#como-usar)
-- [Customizar Elementos](#customizar-os-elementos-do-playground)
+- [Customizar Elementos](#customizar-elementos)
 - [Types](./TYPES.md)
 
 ### Como usar
@@ -58,7 +58,7 @@
 />
 ```
 
-## Customizar os elementos do Playground
+## Customizar Elementos
 
 > Para personalizar os elementos do `Playground`, basta incluir o `StoryComponentTheme` no início do seu projeto e configurar as propriedades de manipulação de cores conforme sua necessidade.
 
