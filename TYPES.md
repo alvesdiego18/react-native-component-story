@@ -25,7 +25,7 @@
 | onPress   | (title?: string, callback?: () => void) => void | false       | adiciona um controle as funções de `pressed`                                                      |
 | isOpen    | boolean                                         | false       | controle para checagem se a `drawer` está aberta                                                  |
 
-Exemplo:
+#### Exemplo:
 
 ```js
 <StoryComponent
@@ -56,6 +56,8 @@ Exemplo:
 | isNumber | boolean | false       | define se este campo deve ser trato como `number` |
 | field    | string  | false       | define qual o nome no `código` desse campo        |
 
+#### Exemplo:
+
 ```js
 import {IStoryTextProps} from "react-native-story-component";
 
@@ -76,6 +78,8 @@ pg.getText("label");
 | title | string | true        | define qual o `título/key` da opção        |
 | value | string | true        | define qual o valor a oção começa          |
 | field | string | false       | define qual o nome no `código` desse campo |
+
+#### Exemplo:
 
 ```js
 import {IStoryBoolProps} from "react-native-story-component";
@@ -98,6 +102,8 @@ pg.getBool("loading");
 | value | string   | true        | define qual o valor a oção começa          |
 | list  | string[] | true        | define quais as opções disponíveis         |
 | field | string   | false       | define qual o nome no `código` desse campo |
+
+#### Exemplo:
 
 ```js
 import {IStoryTypesProps} from "react-native-story-component";
