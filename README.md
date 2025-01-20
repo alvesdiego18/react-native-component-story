@@ -18,7 +18,7 @@
 1. 👔 [Exemplo](#exemplo)
 2. 🍕 [Instalar](#instalar)
 3. 💻 [Como usar](#como-usar)
-4. ✏️ [Customizar Elementos](#customizar-elementos)
+4. ✏️ [Customizar Elementos](#customizando-elementos)
 5. 🎤 [Types](./TYPES.md)
 
 <br/>
@@ -123,7 +123,7 @@ const typesList = [
 
 <br/>
 
-## <a name="customizar-elementos">✏️ Customizar Elementos</a>
+## <a name="customizando-elementos">✏️ Customizando Elementos</a>
 
 > Para personalizar os elementos do `StoryComponent`, basta incluir o `StoryComponentThemeProvider` no início do seu projeto e configurar as propriedades de manipulação de cores conforme sua necessidade.
 
