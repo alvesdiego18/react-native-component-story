@@ -6,7 +6,7 @@ import {
 } from "./types/playground.interface";
 
 import {Playground} from "./playground";
-import {StoryComponentTheme} from "./hooks/usePlaygroundTheme";
+import {StoryComponentTheme} from "./hooks/useStoryComponentTheme";
 
 export type {
   IPlaygroundTextProps,

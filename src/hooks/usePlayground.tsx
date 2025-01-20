@@ -1,12 +1,6 @@
 import React from "react";
 import {ScrollView, View, Animated} from "react-native";
 
-// @ts-ignore
-import SyntaxHighlighter from "react-native-syntax-highlighter";
-
-// @ts-ignore
-import {atomOneDark} from "react-syntax-highlighter/styles/hljs";
-
 import {Spacing} from "../components/Spacing";
 import {SuperDrawer} from "../components/SuperDrawer";
 import {Divider} from "../components/Divider";
@@ -33,7 +27,8 @@ import {BoolList} from "../components/BoolList";
 import {TextList} from "../components/TextList";
 import {PressedList} from "../components/PressedList";
 import {CodeView} from "../components/CodeView";
-import {useStoryComponentTheme} from "./usePlaygroundTheme";
+
+import {useStoryComponentTheme} from "./useStoryComponentTheme";
 
 const PlaygroundContext = React.createContext({} as IPlaygroundContextProps);
 
