@@ -6,16 +6,16 @@ import {Spacing} from "../Spacing";
 import {Switch} from "../Switch";
 
 import {splitCamelCase} from "../../utils/split_camelcase";
-import {IPlaygroundBoolProps} from "../../types/playground.interface";
+import {IStoryBoolProps} from "../../types/playground.interface";
 
 interface Props {
-  boolState: IPlaygroundBoolProps[];
-  setBoolState: (value: React.SetStateAction<IPlaygroundBoolProps[]>) => void;
+  boolState: IStoryBoolProps[];
+  setBoolState: (value: React.SetStateAction<IStoryBoolProps[]>) => void;
 }
 
 export function BoolList({boolState, setBoolState}: Props) {
   const onPress = React.useCallback(
-    (b: IPlaygroundBoolProps) => {
+    (b: IStoryBoolProps) => {
       const filter = boolState.map(f => {
         if (f.title === b.title) {
           f.value = !b.value;

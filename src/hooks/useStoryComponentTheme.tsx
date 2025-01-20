@@ -16,7 +16,7 @@ interface Props extends IContextProp {
   borderColor?: string;
 }
 
-export function StoryComponentTheme({
+export function StoryComponentThemeProvider({
   children,
   buttonName,
   backgroundColor,

@@ -1,18 +1,18 @@
 import {
-  IPlaygroundTextProps,
-  IPlaygroundTypesProps,
-  IPlaygroundBoolProps,
-  IPlaygroundContextProps,
+  IStoryTextProps,
+  IStoryTypesProps,
+  IStoryBoolProps,
+  IStoryContextProps,
 } from "./types/playground.interface";
 
-import {Playground} from "./playground";
-import {StoryComponentTheme} from "./hooks/useStoryComponentTheme";
+import {StoryComponent} from "./playground";
+import {StoryComponentThemeProvider} from "./hooks/useStoryComponentTheme";
 
 export type {
-  IPlaygroundTextProps,
-  IPlaygroundTypesProps,
-  IPlaygroundBoolProps,
-  IPlaygroundContextProps,
+  IStoryTextProps,
+  IStoryTypesProps,
+  IStoryBoolProps,
+  IStoryContextProps,
 };
 
-export {Playground, StoryComponentTheme};
+export {StoryComponent, StoryComponentThemeProvider};

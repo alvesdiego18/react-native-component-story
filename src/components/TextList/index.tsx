@@ -8,15 +8,15 @@ import {Input} from "../Input";
 import {Label} from "../Label";
 
 import {splitCamelCase} from "../../utils/split_camelcase";
-import {IPlaygroundTextProps} from "../../types/playground.interface";
+import {IStoryTextProps} from "../../types/playground.interface";
 
 interface Props {
-  textState: IPlaygroundTextProps[];
-  setTextState: (value: React.SetStateAction<IPlaygroundTextProps[]>) => void;
+  textState: IStoryTextProps[];
+  setTextState: (value: React.SetStateAction<IStoryTextProps[]>) => void;
   filterUniqueGroups: any[];
   groupSelected: string | undefined;
   setGroupSelected: (value: React.SetStateAction<string | undefined>) => void;
-  filterTextState: IPlaygroundTextProps[];
+  filterTextState: IStoryTextProps[];
   setFocus: (value: React.SetStateAction<string | undefined>) => void;
 }
 
@@ -30,7 +30,7 @@ export function TextList({
   setFocus,
 }: Props) {
   const onChangeText = React.useCallback(
-    (value: string, t: IPlaygroundTextProps) => {
+    (value: string, t: IStoryTextProps) => {
       const filter = textState.map(f => {
         if (f.title === t.title) {
           f.value = value;

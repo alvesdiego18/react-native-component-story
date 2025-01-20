@@ -1,34 +1,37 @@
 import React from "react";
 
 import {
-  IPlaygroundBoolProps,
-  IPlaygroundContextProps,
-  IPlaygroundTextProps,
-  IPlaygroundTypesProps,
+  IStoryBoolProps,
+  IStoryContextProps,
+  IStoryTextProps,
+  IStoryTypesProps,
 } from "./types/playground.interface";
 
-import {usePlayground, PlaygroundProvider} from "./hooks/usePlayground";
+import {
+  useStoryComponent,
+  StoryComponentProvider,
+} from "./hooks/useStoryComponent";
 
 interface Props {
-  text?: IPlaygroundTextProps[];
-  bool?: IPlaygroundBoolProps[];
-  types?: IPlaygroundTypesProps[];
-  renderItem: (pg: IPlaygroundContextProps) => JSX.Element;
+  text?: IStoryTextProps[];
+  bool?: IStoryBoolProps[];
+  types?: IStoryTypesProps[];
+  renderItem: (pg: IStoryContextProps) => JSX.Element;
   paddingLeft?: number;
   stageScrollEnabled?: boolean;
   componentName?: string;
 }
 
 interface IComponentProps {
-  renderItem: (pg: IPlaygroundContextProps) => JSX.Element;
+  renderItem: (pg: IStoryContextProps) => JSX.Element;
 }
 
 function Component({renderItem}: IComponentProps) {
-  const pg = usePlayground();
+  const pg = useStoryComponent();
   return <>{renderItem(pg)}</>;
 }
 
-export function Playground({
+export function StoryComponent({
   text,
   bool,
   types,
@@ -38,7 +41,7 @@ export function Playground({
   componentName,
 }: Props) {
   return (
-    <PlaygroundProvider
+    <StoryComponentProvider
       text={text}
       bool={bool}
       types={types}
@@ -47,6 +50,6 @@ export function Playground({
       componentName={componentName}
     >
       <Component renderItem={renderItem} />
-    </PlaygroundProvider>
+    </StoryComponentProvider>
   );
 }

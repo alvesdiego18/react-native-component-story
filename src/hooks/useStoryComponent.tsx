@@ -8,11 +8,11 @@ import {ButtonOpen} from "../components/ButtonOpen";
 import {Input} from "../components/Input";
 
 import {
-  IPlaygroundBoolProps,
+  IStoryBoolProps,
   IProviderProps,
-  IPlaygroundContextProps,
-  IPlaygroundTextProps,
-  IPlaygroundTypesProps,
+  IStoryContextProps,
+  IStoryTextProps,
+  IStoryTypesProps,
 } from "../types/playground.interface";
 
 import {getUniqueGroups} from "../utils/unique_groups";
@@ -30,9 +30,9 @@ import {CodeView} from "../components/CodeView";
 
 import {useStoryComponentTheme} from "./useStoryComponentTheme";
 
-const PlaygroundContext = React.createContext({} as IPlaygroundContextProps);
+const PlaygroundContext = React.createContext({} as IStoryContextProps);
 
-export function PlaygroundProvider({
+export function StoryComponentProvider({
   children,
   text,
   bool,
@@ -60,13 +60,13 @@ export function PlaygroundProvider({
 
   const [focus, setFocus] = React.useState<string | undefined>(undefined);
 
-  const [textState, setTextState] = React.useState<IPlaygroundTextProps[]>(
+  const [textState, setTextState] = React.useState<IStoryTextProps[]>(
     text ?? [],
   );
-  const [boolState, setBoolState] = React.useState<IPlaygroundBoolProps[]>(
+  const [boolState, setBoolState] = React.useState<IStoryBoolProps[]>(
     bool ?? [],
   );
-  const [typesState, setTypesState] = React.useState<IPlaygroundTypesProps[]>(
+  const [typesState, setTypesState] = React.useState<IStoryTypesProps[]>(
     types ?? [],
   );
 
@@ -124,7 +124,7 @@ export function PlaygroundProvider({
   const filterUniqueGroups = getUniqueGroups(textState);
 
   const onChangeText = React.useCallback(
-    (value: string, t: IPlaygroundTextProps) => {
+    (value: string, t: IStoryTextProps) => {
       setTextState(prevTextState =>
         prevTextState.map(f => {
           if (f.title === t.title) {
@@ -321,6 +321,6 @@ export function PlaygroundProvider({
   );
 }
 
-export function usePlayground() {
+export function useStoryComponent() {
   return React.useContext(PlaygroundContext);
 }

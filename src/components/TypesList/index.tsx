@@ -4,13 +4,13 @@ import {Label} from "../Label";
 import {Spacing} from "../Spacing";
 import {ChipSelect} from "../ChipSelect";
 import {splitCamelCase} from "../../utils/split_camelcase";
-import {IPlaygroundTypesProps} from "../../types/playground.interface";
+import {IStoryTypesProps} from "../../types/playground.interface";
 
 interface Props {
-  types: IPlaygroundTypesProps[] | undefined;
+  types: IStoryTypesProps[] | undefined;
   getType(title: string): string;
-  typesState: IPlaygroundTypesProps[];
-  setTypesState: (value: React.SetStateAction<IPlaygroundTypesProps[]>) => void;
+  typesState: IStoryTypesProps[];
+  setTypesState: (value: React.SetStateAction<IStoryTypesProps[]>) => void;
 }
 
 export function TypesList({types, getType, typesState, setTypesState}: Props) {

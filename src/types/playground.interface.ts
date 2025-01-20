@@ -1,4 +1,4 @@
-export interface IPlaygroundTextProps {
+export interface IStoryTextProps {
   title: string;
   value: string | undefined;
   group?: string;
@@ -7,20 +7,20 @@ export interface IPlaygroundTextProps {
   fieldGroup?: string;
 }
 
-export interface IPlaygroundBoolProps {
+export interface IStoryBoolProps {
   title: string;
   value: boolean;
   field?: string;
 }
 
-export interface IPlaygroundTypesProps {
+export interface IStoryTypesProps {
   title: string;
   list: (string | undefined)[];
   value: string | undefined;
   field?: string;
 }
 
-export interface IPlaygroundContextProps {
+export interface IStoryContextProps {
   getText: (title: string) => string;
   getNumber: (title: string) => number | undefined;
   getBool: (title: string) => boolean;
@@ -31,9 +31,9 @@ export interface IPlaygroundContextProps {
 
 export interface IProviderProps {
   children: React.ReactNode;
-  text?: IPlaygroundTextProps[];
-  bool?: IPlaygroundBoolProps[];
-  types?: IPlaygroundTypesProps[];
+  text?: IStoryTextProps[];
+  bool?: IStoryBoolProps[];
+  types?: IStoryTypesProps[];
   paddingLeft?: number;
   stageScrollEnabled?: boolean;
   componentName?: string;
