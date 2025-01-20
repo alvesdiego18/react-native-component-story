@@ -1,8 +1,8 @@
 # Types
 
-> Confira abaixo as propriedades disponíveis para configuração no `Playground`:
+> Confira abaixo as propriedades disponíveis para configuração no `StoryComponent`:
 
-### Playground
+### StoryComponent
 
 | Nome               | Tipo                                                                     | Obrigatório | Descrição                                                       |
 | ------------------ | ------------------------------------------------------------------------ | ----------- | --------------------------------------------------------------- |
@@ -28,7 +28,7 @@
 />
 ```
 
-### IPlaygroundContextProps
+### IStoryContextProps
 
 | Nome      | Tipo                                            | Obrigatório | Descrição                                                                                         |
 | --------- | ----------------------------------------------- | ----------- | ------------------------------------------------------------------------------------------------- |
@@ -57,7 +57,7 @@
 ...
 ```
 
-### IPlaygroundTextProps
+### IStoryTextProps
 
 | Nome     | Tipo    | Obrigatório | Descrição                                         |
 | -------- | ------- | ----------- | ------------------------------------------------- |
@@ -82,7 +82,7 @@ const textList: IStoryTextProps[] = [
 pg.getText("label");
 ```
 
-### IPlaygroundBoolProps
+### IStoryBoolProps
 
 | Nome  | Tipo   | Obrigatório | Descrição                                  |
 | ----- | ------ | ----------- | ------------------------------------------ |
@@ -105,7 +105,7 @@ const boolList: IStoryBoolProps[] = [
 pg.getBool("loading");
 ```
 
-### IPlaygroundTypesProps
+### IStoryTypesProps
 
 | Nome  | Tipo     | Obrigatório | Descrição                                  |
 | ----- | -------- | ----------- | ------------------------------------------ |

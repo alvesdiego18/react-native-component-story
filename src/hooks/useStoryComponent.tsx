@@ -233,7 +233,7 @@ export function StoryComponentProvider({
       <Spacing height={8} />
       <View style={{paddingLeft: paddingLeft}}>
         <ButtonOpen
-          label={openButtonLabel ?? "Playground"}
+          label={openButtonLabel ?? "playground"}
           onPress={() => setOpen(true)}
         />
       </View>

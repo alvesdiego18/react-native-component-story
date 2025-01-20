@@ -1,15 +1,35 @@
-# StoryComponent
+<div align="center">
+  <h1 align="center">StoryComponent</h1>
 
-Para atender à necessidade de realizar QAs mais eficientes em componentes React Native, desenvolvi esta biblioteca. Ela facilita o entendimento, permitindo manipular ou alterar informações diretamente nos componentes. Trata-se de uma alternativa prática ao Storybook, que exige implementação individual para cada componente.
+  <div align="center">
+     Para atender à necessidade de realizar QAs mais eficientes em componentes React Native, desenvolvi esta biblioteca. Ela facilita o entendimento, permitindo manipular ou alterar informações diretamente nos componentes. Trata-se de uma alternativa prática ao Storybook, que exige implementação individual para cada componente.  
+  </div>  
+<br/>     
+  <div>
+    <img src="https://img.shields.io/badge/React--Native@0.70.15-329bb3" alt="React Native" />
+    <img src="https://img.shields.io/badge/Typescript-235a97" alt="Typescript" />
+    <img src="https://img.shields.io/badge/Styled--components-d279b7" alt="styled-components" />
+  </div>  
+</div>
+<br/><br/>
+
+## 📋 <a name="table">Sumário</a>
+
+1. 👔 [Exemplo](#exemplo)
+2. 💻 [Instalar](#instalar)
+3. 🍕 [Como usar](#como-usar)
+4. ✏️ [Customizar Elementos](#customizar-elementos)
+5. 🎤 [Types](#TYPES.md)
+
+<br/>
+
+## <a name="exemplo">👔 Exemplo</a>
 
 ![<alt-text>](./src/docfiles/storycomponent.gif)
 
-- [Instalar](#instalar)
-- [Como usar](#como-usar)
-- [Customizar Elementos](#customizar-elementos)
-- [Types](./TYPES.md)
+<br/>
 
-### Instalar
+## <a name="instalar">💻 Instalar</a>
 
 > Execute o comando abaixo para instalar o `StoryComponent`.
 
@@ -17,7 +37,9 @@ Para atender à necessidade de realizar QAs mais eficientes em componentes React
 npm i react-native-story-component
 ```
 
-### Como usar
+<br/>
+
+## <a name="como-usar">⚙️ Como usar</a>
 
 > Para utilizá-la, basta instanciar o `StoryComponent`, informar o componente a ser renderizado por meio da propriedade `renderItem` e adicionar os campos que serão manipulados. Confira um exemplo prático abaixo:
 
@@ -54,7 +76,7 @@ import { StoryComponent } from 'react-native-story-component';
   componentName="Button"
   // Define se o `palco` do componente terá scroll.
   stageScrollEnabled={false}
-  // O `pg` retorna todas as funções necessárias para buscar os valores definidos no playground. Veja as opções disponíveis [aqui](#iplaygroundcontextprops).
+  // O `pg` retorna todas as funções necessárias para buscar os valores definidos no StoryComponent. Veja as opções disponíveis [aqui](#istorycontextprops).
   renderItem={pg => (
 
     // O componente Button será renderizando criando os controles para manipulaçãp.
@@ -72,9 +94,11 @@ import { StoryComponent } from 'react-native-story-component';
 />
 ```
 
-## Customizar Elementos
+<br/>
 
-> Para personalizar os elementos do `Playground`, basta incluir o `StoryComponentThemeProvider` no início do seu projeto e configurar as propriedades de manipulação de cores conforme sua necessidade.
+## <a name="customizar-elementos">✏️ Customizar Elementos</a>
+
+> Para personalizar os elementos do `StoryComponent`, basta incluir o `StoryComponentThemeProvider` no início do seu projeto e configurar as propriedades de manipulação de cores conforme sua necessidade.
 
 ```js
 import {StoryComponentThemeProvider} from "react-native-story-component";
