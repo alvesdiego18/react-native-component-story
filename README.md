@@ -1,10 +1,20 @@
-# react-native-story-component
+# StoryComponent
 
 > Para atender à necessidade de realizar QAs mais eficientes em componentes React Native, desenvolvi esta biblioteca. Ela facilita o entendimento, permitindo manipular ou alterar informações diretamente nos componentes. Trata-se de uma alternativa prática ao Storybook, que exige implementação individual para cada componente.
+
+![<alt-text>](./src/docfiles/storycomponent.gif)
 
 - [Como usar](#como-usar)
 - [Customizar Elementos](#customizar-elementos)
 - [Types](./TYPES.md)
+
+### Instalar
+
+> Execute o comando abaixo para instalar o `Story Component`.
+
+```js
+npm i react-native-story-component
+```
 
 ### Como usar
 
@@ -65,9 +75,9 @@ import { Playground } from 'react-native-story-component';
 > Para personalizar os elementos do `Playground`, basta incluir o `StoryComponentTheme` no início do seu projeto e configurar as propriedades de manipulação de cores conforme sua necessidade.
 
 ```js
-import {StoryComponentTheme} from "react-native-story-component";
+import {StoryComponentThemeProvider} from "react-native-story-component";
 
-<StoryComponentTheme
+<StoryComponentThemeProvider
   buttonName="Abrir Playground"
   backgroundColor="red"
   textColor="#333"
@@ -76,5 +86,5 @@ import {StoryComponentTheme} from "react-native-story-component";
   borderRadius={500}
 >
   // Componente que inicia sua aplicação ...
-</StoryComponentTheme>;
+</StoryComponentThemeProvider>;
 ```
