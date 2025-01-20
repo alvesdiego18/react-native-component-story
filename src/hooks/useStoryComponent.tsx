@@ -41,7 +41,7 @@ export function StoryComponentProvider({
   stageScrollEnabled = false,
   componentName,
 }: IProviderProps) {
-  const {buttonName} = useStoryComponentTheme();
+  const {openButtonLabel} = useStoryComponentTheme();
 
   const inputRef = React.useRef(null);
   const animation = React.useRef(new Animated.Value(0)).current;
@@ -233,7 +233,7 @@ export function StoryComponentProvider({
       <Spacing height={8} />
       <View style={{paddingLeft: paddingLeft}}>
         <ButtonOpen
-          label={buttonName ?? "Playground"}
+          label={openButtonLabel ?? "Playground"}
           onPress={() => setOpen(true)}
         />
       </View>

@@ -78,7 +78,7 @@ import { Playground } from 'react-native-story-component';
 import {StoryComponentThemeProvider} from "react-native-story-component";
 
 <StoryComponentThemeProvider
-  buttonName="Abrir Playground"
+  openButtonLabel="Abrir Playground"
   backgroundColor="red"
   textColor="#333"
   textColorSelected="blue"

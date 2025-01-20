@@ -4,7 +4,7 @@ import {ThemeProvider} from "styled-components/native";
 const StoryComponentContext = createContext({} as IContextProp);
 
 interface IContextProp {
-  buttonName?: string;
+  openButtonLabel?: string;
   borderRadius?: number;
 }
 
@@ -18,7 +18,7 @@ interface Props extends IContextProp {
 
 export function StoryComponentThemeProvider({
   children,
-  buttonName,
+  openButtonLabel,
   backgroundColor,
   textColor,
   textColorSelected,
@@ -26,10 +26,10 @@ export function StoryComponentThemeProvider({
   borderRadius,
 }: Props) {
   return (
-    <StoryComponentContext.Provider value={{buttonName, borderRadius}}>
+    <StoryComponentContext.Provider value={{openButtonLabel, borderRadius}}>
       <ThemeProvider
         theme={{
-          buttonName,
+          openButtonLabel,
           backgroundColor,
           textColor,
           textColorSelected,
