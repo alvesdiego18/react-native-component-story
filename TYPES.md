@@ -6,9 +6,9 @@
 
 | Nome               | Tipo                                                           | Obrigatório | Descrição                                                       |
 | ------------------ | -------------------------------------------------------------- | ----------- | --------------------------------------------------------------- |
-| text               | [IStoryTextProps[]](#istorytextprops)                          | true        | define quais os `textos` serão manipulados                      |
-| bool               | [IStoryBoolProps[]](#istoryboolprops)                          | true        | define quais campos `booleanos` serão manipulados               |
-| types              | [IStoryTypesProps[]](#istorytypesprops)                        | true        | define quais `types` serão manipulados                          |
+| text               | [IStoryTextProps[]](#istorytextprops)                          | false       | define quais os `textos` serão manipulados                      |
+| bool               | [IStoryBoolProps[]](#istoryboolprops)                          | false       | define quais campos `booleanos` serão manipulados               |
+| types              | [IStoryTypesProps[]](#istorytypesprops)                        | false       | define quais `types` serão manipulados                          |
 | renderItem         | (pg: [IStoryContextProps](#istorycontextprops)) => JSX.Element | true        | componente a ser renderizado                                    |
 | componentName      | string                                                         | false       | define qual o nome do componente será exibido ao gerar o código |
 | stageScrollEnabled | boolean                                                        | false       | ativa o scroll no `palco`                                       |
