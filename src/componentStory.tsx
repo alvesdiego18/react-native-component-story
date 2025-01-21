@@ -8,9 +8,9 @@ import {
 } from "./types/playground.interface";
 
 import {
-  useStoryComponent,
-  StoryComponentProvider,
-} from "./hooks/useStoryComponent";
+  useComponentStory,
+  ComponentStoryProvider,
+} from "./hooks/useComponentStory";
 
 interface Props {
   text?: IStoryTextProps[];
@@ -27,11 +27,11 @@ interface IComponentProps {
 }
 
 function Component({renderItem}: IComponentProps) {
-  const pg = useStoryComponent();
+  const pg = useComponentStory();
   return <>{renderItem(pg)}</>;
 }
 
-export function StoryComponent({
+export function ComponentStory({
   text,
   bool,
   types,
@@ -41,7 +41,7 @@ export function StoryComponent({
   componentName,
 }: Props) {
   return (
-    <StoryComponentProvider
+    <ComponentStoryProvider
       text={text}
       bool={bool}
       types={types}
@@ -50,6 +50,6 @@ export function StoryComponent({
       componentName={componentName}
     >
       <Component renderItem={renderItem} />
-    </StoryComponentProvider>
+    </ComponentStoryProvider>
   );
 }

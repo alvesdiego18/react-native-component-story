@@ -1,7 +1,7 @@
 import React, {useContext, createContext} from "react";
 import {ThemeProvider} from "styled-components/native";
 
-const StoryComponentContext = createContext({} as IContextProp);
+const ComponentStoryContext = createContext({} as IContextProp);
 
 interface IContextProp {
   openButtonLabel?: string;
@@ -16,7 +16,7 @@ interface Props extends IContextProp {
   borderColor?: string;
 }
 
-export function StoryComponentThemeProvider({
+export function ComponentStoryThemeProvider({
   children,
   openButtonLabel,
   backgroundColor,
@@ -26,7 +26,7 @@ export function StoryComponentThemeProvider({
   borderRadius,
 }: Props) {
   return (
-    <StoryComponentContext.Provider value={{openButtonLabel, borderRadius}}>
+    <ComponentStoryContext.Provider value={{openButtonLabel, borderRadius}}>
       <ThemeProvider
         theme={{
           openButtonLabel,
@@ -39,10 +39,10 @@ export function StoryComponentThemeProvider({
       >
         {children}
       </ThemeProvider>
-    </StoryComponentContext.Provider>
+    </ComponentStoryContext.Provider>
   );
 }
 
-export function useStoryComponentTheme() {
-  return useContext(StoryComponentContext);
+export function useComponentStoryTheme() {
+  return useContext(ComponentStoryContext);
 }

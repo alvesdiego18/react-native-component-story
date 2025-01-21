@@ -1,5 +1,5 @@
 <div align="center">
-  <h1 align="center">Story Component</h1>
+  <h1 align="center">Component Story</h1>
 
   <div align="center">
      Para atender à necessidade de realizar QAs mais eficientes em componentes React Native, desenvolvi esta biblioteca. Ela facilita o entendimento, permitindo manipular ou alterar informações diretamente nos componentes. Trata-se de uma alternativa prática ao Storybook, que exige implementação individual para cada componente.  
@@ -26,30 +26,30 @@
 
 ## <a name="exemplo">👔 Exemplo</a>
 
-![<alt-text>](./src/docfiles/storycomponent.gif)
+![<alt-text>](./src/docfiles/componentstory.gif)
 
 <br/>
 
 ## <a name="instalar">🍕 Instalar</a>
 
-> Execute o comando abaixo para instalar o `StoryComponent`.
+> Execute o comando abaixo para instalar o `ComponentStory`.
 
 ```js
-npm i react-native-story-component
+npm i react-native-component-story
 ```
 
 <br/>
 
 ## <a name="como-usar">💻 Como usar</a>
 
-> Para utilizá-la, basta instanciar o `StoryComponent`, informar o componente a ser renderizado por meio da propriedade `renderItem` e adicionar os campos que serão manipulados. Confira um exemplo prático abaixo:
+> Para utilizá-la, basta instanciar o `ComponentStory`, informar o componente a ser renderizado por meio da propriedade `renderItem` e adicionar os campos que serão manipulados. Confira um exemplo prático abaixo:
 
 #### Exemplo simplificado
 
 ```js
-import {StoryComponent} from "react-native-story-component";
+import {ComponentStory} from "react-native-component-story";
 
-<StoryComponent
+<ComponentStory
   text={[{title: "label", value: "Label"}]}
   bool={[{title: "loading", value: false}]}
   renderItem={pg => (
@@ -65,7 +65,7 @@ import {StoryComponent} from "react-native-story-component";
 #### Exemplo completo
 
 ```js
-import { StoryComponent } from 'react-native-story-component';
+import { ComponentStory } from 'react-native-component-story';
 
 // Define quantos campos de manipulação
 // de texto serão criados.
@@ -95,7 +95,7 @@ const typesList = [
   },
 ]
 
-<StoryComponent
+<ComponentStory
   text={textList}
   bool={boolList}
   types={typesList}
@@ -104,7 +104,7 @@ const typesList = [
   componentName="Button"
   // Define se o `palco` do componente terá scroll.
   stageScrollEnabled={false}
-  // O `pg` retorna todas as funções necessárias para buscar os valores definidos no StoryComponent. Veja as opções disponíveis [aqui](#istorycontextprops).
+  // O `pg` retorna todas as funções necessárias para buscar os valores definidos no ComponentStory. Veja as opções disponíveis [aqui](#istorycontextprops).
   renderItem={pg => (
 
     // O componente Button será renderizando criando os controles para manipulaçãp.
@@ -126,12 +126,12 @@ const typesList = [
 
 ## <a name="customizando-elementos">✏️ Customizando Elementos</a>
 
-> Para personalizar os elementos do `StoryComponent`, basta incluir o `StoryComponentThemeProvider` no início do seu projeto e configurar as propriedades de manipulação de cores conforme sua necessidade.
+> Para personalizar os elementos do `ComponentStory`, basta incluir o `ComponentStoryThemeProvider` no início do seu projeto e configurar as propriedades de manipulação de cores conforme sua necessidade.
 
 ```js
-import {StoryComponentThemeProvider} from "react-native-story-component";
+import {ComponentStoryThemeProvider} from "react-native-component-story";
 
-<StoryComponentThemeProvider
+<ComponentStoryThemeProvider
   openButtonLabel="Abrir Playground"
   backgroundColor="red"
   textColor="#333"
@@ -140,5 +140,5 @@ import {StoryComponentThemeProvider} from "react-native-story-component";
   borderRadius={500}
 >
   // Componente que inicia sua aplicação ...
-</StoryComponentThemeProvider>;
+</ComponentStoryThemeProvider>;
 ```

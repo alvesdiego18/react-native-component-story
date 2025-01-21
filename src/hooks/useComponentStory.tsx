@@ -28,11 +28,11 @@ import {TextList} from "../components/TextList";
 import {PressedList} from "../components/PressedList";
 import {CodeView} from "../components/CodeView";
 
-import {useStoryComponentTheme} from "./useStoryComponentTheme";
+import {useComponentStoryTheme} from "./useComponentStoryTheme";
 
-const PlaygroundContext = React.createContext({} as IStoryContextProps);
+const ComponentStoryContext = React.createContext({} as IStoryContextProps);
 
-export function StoryComponentProvider({
+export function ComponentStoryProvider({
   children,
   text,
   bool,
@@ -41,7 +41,7 @@ export function StoryComponentProvider({
   stageScrollEnabled = false,
   componentName,
 }: IProviderProps) {
-  const {openButtonLabel} = useStoryComponentTheme();
+  const {openButtonLabel} = useComponentStoryTheme();
 
   const inputRef = React.useRef(null);
   const animation = React.useRef(new Animated.Value(0)).current;
@@ -218,7 +218,7 @@ export function StoryComponentProvider({
   const isEnabledButtonShowCode = !componentName;
 
   return (
-    <PlaygroundContext.Provider
+    <ComponentStoryContext.Provider
       value={{
         getText,
         getBool,
@@ -317,10 +317,10 @@ export function StoryComponentProvider({
           <PressedList listButtonPressed={listButtonPressed} />
         </ScrollView>
       </SuperDrawer>
-    </PlaygroundContext.Provider>
+    </ComponentStoryContext.Provider>
   );
 }
 
-export function useStoryComponent() {
-  return React.useContext(PlaygroundContext);
+export function useComponentStory() {
+  return React.useContext(ComponentStoryContext);
 }

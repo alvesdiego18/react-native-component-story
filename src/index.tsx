@@ -5,8 +5,8 @@ import {
   IStoryContextProps,
 } from "./types/playground.interface";
 
-import {StoryComponent} from "./playground";
-import {StoryComponentThemeProvider} from "./hooks/useStoryComponentTheme";
+import {ComponentStory} from "./componentStory";
+import {ComponentStoryThemeProvider} from "./hooks/useComponentStoryTheme";
 
 export type {
   IStoryTextProps,
@@ -15,4 +15,4 @@ export type {
   IStoryContextProps,
 };
 
-export {StoryComponent, StoryComponentThemeProvider};
+export {ComponentStory, ComponentStoryThemeProvider};

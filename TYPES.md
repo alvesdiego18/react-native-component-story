@@ -1,8 +1,8 @@
 # Types
 
-> Confira abaixo as propriedades disponíveis para configuração no `StoryComponent`:
+> Confira abaixo as propriedades disponíveis para configuração no `ComponentStory`:
 
-### StoryComponent
+### ComponentStory
 
 | Nome               | Tipo                                                           | Obrigatório | Descrição                                                       |
 | ------------------ | -------------------------------------------------------------- | ----------- | --------------------------------------------------------------- |
@@ -17,7 +17,7 @@
 #### Exemplo:
 
 ```js
-<StoryComponent
+<ComponentStory
   text={[{title: 'TITLE', value: 'VALUE'}]}
   bool={[{title: 'TITLE', value: 'VALUE'}]}
   types={[{title: 'TITLE', value: 'VALUE'}]}
@@ -70,7 +70,7 @@
 #### Exemplo:
 
 ```js
-import {IStoryTextProps} from "react-native-story-component";
+import {IStoryTextProps} from "react-native-component-story";
 
 const textList: IStoryTextProps[] = [
   {title: "label", value: "Label"},
@@ -93,7 +93,7 @@ pg.getText("label");
 #### Exemplo:
 
 ```js
-import {IStoryBoolProps} from "react-native-story-component";
+import {IStoryBoolProps} from "react-native-component-story";
 
 const boolList: IStoryBoolProps[] = [
   {title: "loading", value: false},
@@ -117,7 +117,7 @@ pg.getBool("loading");
 #### Exemplo:
 
 ```js
-import {IStoryTypesProps} from "react-native-story-component";
+import {IStoryTypesProps} from "react-native-component-story";
 
 const typesList: IStoryTypesProps[] = [
   {
