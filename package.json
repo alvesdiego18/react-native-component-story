@@ -1,17 +1,24 @@
 {
-  "name": "react-native-story-component",
-  "version": "0.0.90",
+  "name": "react-native-component-story",
+  "description": "Uma biblioteca para facilitar a realização de QAs eficientes em componentes React Native. Permite manipular e alterar informações diretamente nos componentes, oferecendo uma alternativa prática ao Storybook, sem a necessidade de implementar cada componente individualmente.",
+  "version": "1.0.1",
   "main": "dist/index.js",
   "module": "dist/index.d.js",
   "files": [
-    "dist"
+    "dist",
+    "README.md",
+    "TYPES.md"
   ],
-  "author": "Diego Alves",
+  "author": "Diego Alves <alvesdiego18@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/alvesdiego18/react-native-story-component",
+  "readme": "https://github.com/alvesdiego18/react-native-component-story/blob/main/README.md",
+  "bugs": {
+    "url": "https://github.com/alvesdiego18/react-native-component-story/issues"
+  },
   "repository": {
     "type": "git",
-    "url": "git@github.com:alvesdiego18/react-native-story-component.git"
+    "url": "git@github.com:alvesdiego18/react-native-component-story.git"
   },
   "scripts": {
     "clean-tgz": "find . -name '*.tgz' -exec rm {} +",
@@ -54,5 +61,9 @@
   },
   "engines": {
     "node": ">=16"
-  }
+  },
+  "keywords": [
+    "storybook",
+    "react-native"
+  ]
 }
