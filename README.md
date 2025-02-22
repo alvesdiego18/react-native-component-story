@@ -1,17 +1,12 @@
-<div align="center">
-  <h1 align="center">Component Story</h1>
+# Component Story
 
-  <div align="center">
-     Para atender à necessidade de realizar QAs mais eficientes em componentes React Native, desenvolvi esta biblioteca. Ela facilita o entendimento, permitindo manipular ou alterar informações diretamente nos componentes. Trata-se de uma alternativa prática ao Storybook, que exige implementação individual para cada componente.  
-  </div>  
-<br/>     
-  <div>
-    <img src="https://img.shields.io/badge/React--Native@0.70.15-329bb3" alt="React Native" />
-    <img src="https://img.shields.io/badge/Typescript-235a97" alt="Typescript" />
-    <img src="https://img.shields.io/badge/Styled--components-d279b7" alt="styled-components" />
-  </div>  
+Para atender à necessidade de realizar QAs mais eficientes em componentes React Native, desenvolvi esta biblioteca. Ela facilita o entendimento, permitindo manipular ou alterar informações diretamente nos componentes. Trata-se de uma alternativa prática ao Storybook, que exige implementação individual para cada componente.
+
+<div>
+  <img src="https://img.shields.io/badge/React--Native@0.70.15-329bb3" alt="React Native" />
+  <img src="https://img.shields.io/badge/Typescript-235a97" alt="Typescript" />
+  <img src="https://img.shields.io/badge/Styled--components-d279b7" alt="styled-components" />
 </div>
-<br/><br/>
 
 ## 📋 <a name="table">Sumário</a>
 
